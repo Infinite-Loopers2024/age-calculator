@@ -9,6 +9,11 @@ export const input = new Input({
 });
 
 input.ask(function (answers: number) {
-  const age = currentYear - answers;
+  const age = calculateAge(answers);
   console.log(age);
 });
+
+function calculateAge(number: number) {
+  const age = currentYear - number;
+  return age;
+}
