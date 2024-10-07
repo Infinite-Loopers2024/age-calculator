@@ -16,13 +16,13 @@ export function calculateAge(number: string) {
   const month = number.split("-")[1];
   const currentMonth = new Date().getMonth();
   let age: number;
-  
-  if (currentMonth > parseInt(month)) return age = currentYear - parseInt(year);
+
+  if (currentMonth > parseInt(month))
+    return (age = currentYear - parseInt(year));
   if (currentMonth < parseInt(month))
-    return age = currentYear - parseInt(year) - 1;
-  
+    return (age = currentYear - parseInt(year) - 1);
+
   console.log(currentMonth);
   console.log(month);
   console.log(year);
- 
 }
