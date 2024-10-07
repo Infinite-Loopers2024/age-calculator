@@ -13,7 +13,7 @@ input.ask(function (answers: number) {
   console.log(age);
 });
 
-function calculateAge(number: number) {
+export function calculateAge(number: number) {
   const age = currentYear - number;
   return age;
 }
