@@ -13,6 +13,8 @@ input.ask(function (answers: string) {
   console.log(age);
 });
 
+const MONTHS = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+
 export function calculateAge(number: string) {
   const year = number.split("-")[0];
   const month = number.split("-")[1];
@@ -21,8 +23,10 @@ export function calculateAge(number: string) {
 
   let days = parseInt(day) - currentday;
 
+  let daysInMonth = MONTHS[days - 1];
+
   if (days < 0) {
-    days = 31 + days;
+    days = daysInMonth + days;
   }
 
   if (parseInt(month) < 0 || parseInt(month) > 12)
